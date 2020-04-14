@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { callReducers } from'./reducers/reducer.js'
 
 /*********************************************************************
  * TODOS for index.js
@@ -16,7 +17,7 @@ import 'bulma/css/bulma.css';
 import './styles.scss';
 
 //created store for global state objects
-const store = createStore(reducer);
+const store = createStore(callReducers);
 
 //wrapped <App /> with Provider and fed context of store for global state objects
 const rootElement = document.getElementById('root');
